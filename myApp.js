@@ -54,8 +54,8 @@ const findPeopleByName = (personName, done) => {
       console.log(err);
       return handleError(err);
     }
+    done(null, personFound);
   });
-  done(null, personFound);
 };
 
 const findOneByFood = (food, done) => {

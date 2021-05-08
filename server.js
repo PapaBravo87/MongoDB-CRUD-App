@@ -215,6 +215,7 @@ router.get("/find-by-id", function (req, res, next) {
 });
 
 const findEdit = require("./myApp.js").findEditThenSave;
+// console.log("In URANUS");
 router.post("/find-edit-save", function (req, res, next) {
   let t = setTimeout(() => {
     next({ message: "timeout" });
@@ -225,6 +226,7 @@ router.post("/find-edit-save", function (req, res, next) {
       return next(err);
     }
     try {
+      // console.log("In URANUSss");
       findEdit(pers._id, function (err, data) {
         clearTimeout(t);
         if (err) {

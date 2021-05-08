@@ -158,8 +158,8 @@ router.post("/find-all-by-name", function (req, res, next) {
         return next({ message: "Missing callback argument" });
       }
       res.json(data);
-      // Person.remove().exec();
-      Person.deleteMany({}).exec();
+      Person.remove().exec();
+      // Person.deleteMany({}).exec();
     });
   });
 });

@@ -159,6 +159,7 @@ router.post("/find-all-by-name", function (req, res, next) {
       }
       res.json(data);
       // Person.remove().exec();
+      Person.deleteMany({}).exec();
     });
   });
 });

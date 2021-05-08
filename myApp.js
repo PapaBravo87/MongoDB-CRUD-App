@@ -60,12 +60,12 @@ const findPeopleByName = (personName, done) => {
 
 const findOneByFood = (food, done) => {
   // done(null /*, data*/);
-  Person.find( {favoriteFoods: 'food'} , function(err,personFound) {
+  Person.findOne( {favoriteFoods: food} , function(err,data) {
     if(err) {
       console.log(err);
       return handleError(err);
     }
-    done(null, personFound);
+    done(null, data);
   });
 };
 

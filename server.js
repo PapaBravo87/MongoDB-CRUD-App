@@ -323,6 +323,7 @@ const removeMany = require("./myApp.js").removeManyPeople;
 router.post("/remove-many-people", function (req, res, next) {
   Person.remove({}, function (err) {
     if (err) {
+      console.log(err);
       return next(err);
     }
     let t = setTimeout(() => {
